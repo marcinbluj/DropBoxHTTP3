@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void downloadFile(DropboxFile file) {
-//        new DownloadFileTask(this).execute(file);
+        new DownloadFileTask(this).execute(file);
     }
 
     @Override

@@ -101,7 +101,7 @@ public class DownloadFileTask extends AsyncTask<DropboxFile, String, DownloadFil
         super.onPostExecute(response);
 
         if (!response.isSuccess()) {
-            mainActivity.showError(response.getErrorMessage());
+            mainActivity.showToast(response.getErrorMessage());
         }
         else {
             File file = response.getTargetFile();
@@ -120,7 +120,7 @@ public class DownloadFileTask extends AsyncTask<DropboxFile, String, DownloadFil
         RequestBody requestBody = RequestBody.create(null, "");
         Request.Builder builder = new Request.Builder();
         builder.url("https://content.dropboxapi.com/2/files/download");
-        builder.addHeader("Authorization", "Bearer QU5gDEC7TYAAAAAAAAAAEWR4ouLrr400-dw7cw0zzWVfd0nXre4GXGARDyCctNJE");
+        builder.addHeader("Authorization", "Bearer OBXA9Bb7b9AAAAAAAAAAGp1tBwfgorSXOttDtv8UX46Dep1XO642q6Vyf69GsG8r");
         builder.addHeader("Dropbox-API-Arg", json.toString());
         builder.post(requestBody);
 

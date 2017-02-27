@@ -21,7 +21,7 @@ import okhttp3.Response;
  * Created by RENT on 2017-02-25.
  */
 
-public class GetFilesListTask extends AsyncTask<String, Integer, GetFilesListTask.GetFilesListResult> {
+public class  GetFilesListTask extends AsyncTask<String, Integer, GetFilesListTask.GetFilesListResult> {
 
     private String path;
 
@@ -98,6 +98,7 @@ public class GetFilesListTask extends AsyncTask<String, Integer, GetFilesListTas
             dropboxFile.setName(jsonObject.optString("name"));
             dropboxFile.setPath(jsonObject.optString("path_lower"));
             dropboxFile.setTag(jsonObject.optString(".tag"));
+            dropboxFile.setId(jsonObject.optString("id"));
             list.add(dropboxFile);
         }
 
